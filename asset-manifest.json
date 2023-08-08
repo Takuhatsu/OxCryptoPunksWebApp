@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.26104df5.css",
-    "main.js": "/static/js/main.df2f7f02.js",
+    "main.css": "/static/css/main.139ccc33.css",
+    "main.js": "/static/js/main.ad7b42c1.js",
     "static/js/787.ca274188.chunk.js": "/static/js/787.ca274188.chunk.js",
     "static/media/MonumentGrotesk-Italic.ttf": "/static/media/MonumentGrotesk-Italic.38e3e6f7cc81a06f7bcd.ttf",
     "static/media/MonumentGrotesk-Regular.ttf": "/static/media/MonumentGrotesk-Regular.02c608d4045c684e70bb.ttf",
@@ -13,13 +13,14 @@
     "static/media/rdlogo.svg": "/static/media/rdlogo.808727e25c68c1084c0b2afbe8c46522.svg",
     "static/media/PunkVariety.png": "/static/media/PunkVariety.e357c62005f08b66cb96.png",
     "static/media/OxLogo.svg": "/static/media/OxLogo.b60e2287181de170ffbc4896629bf586.svg",
+    "static/media/cursor.cur": "/static/media/cursor.0146b3741746d118f1be.cur",
     "index.html": "/index.html",
-    "main.26104df5.css.map": "/static/css/main.26104df5.css.map",
-    "main.df2f7f02.js.map": "/static/js/main.df2f7f02.js.map",
+    "main.139ccc33.css.map": "/static/css/main.139ccc33.css.map",
+    "main.ad7b42c1.js.map": "/static/js/main.ad7b42c1.js.map",
     "787.ca274188.chunk.js.map": "/static/js/787.ca274188.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26104df5.css",
-    "static/js/main.df2f7f02.js"
+    "static/css/main.139ccc33.css",
+    "static/js/main.ad7b42c1.js"
   ]
 }
