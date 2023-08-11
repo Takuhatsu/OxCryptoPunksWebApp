@@ -11,8 +11,8 @@ const MainPageContent = () => {
     <div className='mainpage-container'>
       <div className='title-image'>
        <img className='image' src={PunkVar} alt='Punk Variety' /> 
-       <figcaption className='caption'>Strongly influenced by CryptoPunks™</figcaption>
        </div>
+       <figcaption className='caption'>Strongly influenced by CryptoPunks™</figcaption>
       <p className='text-web'>
         10,000 unique collectible characters, with proof of ownership stored as
         binary code on the Ethereum blockchain, which can be retrieved and
