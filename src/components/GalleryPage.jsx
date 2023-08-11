@@ -54,7 +54,7 @@ const GalleryPage = () => {
           })
           .map(async (data) => {
             const imageName = `${data.name.split('#')[1]}.png`
-            const imageSource = `https://raw.githubusercontent.com/Takuhatsu/oxpunksgallery/main/punks/${imageName}`;
+            const imageSource = `https://raw.githubusercontent.com/Takuhatsu/OxCryptoPunksWebApp/main/src/images/gallery/${imageName}`;
             const name = data.name;
             const attributes = data.attributes;
   
