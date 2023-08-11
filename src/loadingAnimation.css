@@ -1,0 +1,39 @@
+/* 変数 */
+:root {
+    --ball-color: #ea34b0; /* ボールの色 */
+}
+
+/* bayc ローダースタイル */
+.bayc-loader {
+    display: block;
+}
+
+.bayc-loader span {
+    display: inline-block;
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.bayc-loader span:not(:first-child) {
+    margin-left: 10px;
+}
+
+.bayc-loader span {
+    background: var(--ball-color);
+    animation: move 0.3s ease-in-out infinite alternate;
+}
+
+.bayc-loader span:nth-child(2) {
+    animation-delay: -0.1s;
+}
+
+.bayc-loader span:nth-child(3) {
+    animation-delay: -0.2s;
+}
+
+@keyframes move {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(5px); }
+}

@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'Ultra', serif;
+  src: url(./fonts/Ultra-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Monument Grotesk';
+  src: local('Monument Grotesk Regular'), local('Monument-Grotesk-Regular'),
+      url('./fonts/MonumentGrotesk-Regular.woff2') format('woff2'),
+      url('./fonts/MonumentGrotesk-Regular.woff') format('woff'),
+      url('./fonts/MonumentGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monument Grotesk';
+  src: local('Monument Grotesk Italic'), local('Monument-Grotesk-Italic'),
+      url('./fonts/MonumentGrotesk-Italic.woff2') format('woff2'),
+      url('./fonts/MonumentGrotesk-Italic.woff') format('woff'),
+      url('./fonts/MonumentGrotesk-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Monument Grotesk';
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 1.2;
+}
+
+.text-web-italic {
+  font-family: 'Monument Grotesk';
+  font-style: italic;
+}
+
+.text-web {
+  font-family: 'Monument Grotesk';
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: -.01em;
+  color: #363636;
+}
+
+.navlink {
+  font-family: 'Monument Grotesk';
+  font-style: italic;
+}
+
+.link-in-text {
+  text-decoration: none;
+  color:#ea34b0;
+}
+
+.link-in-text:hover {
+  color:#363636;
+  transition: color 0.3s;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mint-form {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.css-1f7jt3g-MuiFormControl-root-MuiTextField-root.css-1f7jt3g-MuiFormControl-root-MuiTextField-root {
+  margin: 0px;
+}
+
+.css-1hcd1vj.css-1hcd1vj {
+  width: 100%;
+  margin: 0px;
+}
+
+.on-chain-button {
+  margin-bottom: 1rem !important;
+}
+
+.title-image {
+  width: 100%;
+}
+
+
+.dropdown-menu {
+  font-family: 'Monument Grotesk';
+  font-style: italic;
+  font-weight: 100;
+}
+
+.text-separator {
+  margin-bottom: 1rem;
+}
+
+.titles {
+  font-family: 'Ultra', serif;
+  color: #363636;
+}
+
+.App {
+  padding-top: 0.4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* To avoid content flickering while page is loading */
+  min-height: 103vh;
+}
+
+#OxLogo {
+  margin-right: auto;
+  width: 25rem;
+  height: auto;
+}
+
+#OxLogo img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-icon-container {
+  margin-left: auto;
+}
+
+.breadcrumbs-container {
+  margin-left: auto;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+  /* Add hover color */
+  transition: color 0.3s;
+}
+
+.App-link:hover {
+  color: #ea34b0;
+}
+
+.imageGallery {
+  width: 192;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+.caption {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.no-rounded-border .MuiFilledInput-root {
+  font-family: 'Monument Grotesk';
+  border-radius: 0;
+}
+
+/* Add Punk or Add Attributes succsess message */
+
+.success-message {
+  display: flex;
+  justify-content: center;
+}
+
+.return-attributes-count {
+  display: flex;
+  font-style: italic;
+  color:#ea34b0;
+  justify-content: center;
+}
+
+.RenderPunk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height if needed */
+}
+
+#punkAttributes {
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.separate-line {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*
+  Gallery section
+*/
+
+.search-bar{
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
+.search-input {
+  flex: 3;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.search-button {
+  flex: 1;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.reset-button {
+  flex: 1;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-gap: 0.5rem; /* Decreased margin between images */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+}
+
+.gallery-container .image-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-container .image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pagination-buttons button {
+  margin: 0 0.5rem;
+}
+
+
+/*
+  End of Gallery section
+*/
+
+/*
+  Footer section
+*/
+
+.pFooter {
+  margin-bottom: 0px;
+}
+
+#smart-contract-address {
+  text-align: center;
+}
+
+#smart-contract-address-mobile{
+  text-align: center;
+  display: none;
+}
+
+.footer {
+  padding-top: calc(1rem + 1px); /* Add 1px to match the navbar padding */
+  padding-bottom: calc(1rem + 1px); /* Add 1px to match the navbar padding */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  height: 2rem;
+  margin-right: auto;
+}
+
+.footer-social-icons {
+  font-size: 0.7rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.footer-social-icons a {
+  margin-left: 1rem;
+  color: #666666;
+}
+
+.footer-social-icons a svg {
+  width: 1rem; /* Set the width of the icons */
+  height: 1rem; /* Set the height of the icons */
+}
+
+.footer-social-icons a:hover {
+  color: #ea34b0;
+}
+
+.footer-social-icons p {
+  margin-top: 1rem; /* Add margin-top to create spacing between icons and text */
+  color: #666666;
+}
+
+#tos {
+  cursor: pointer;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+/*
+  End of the Footer section
+*/
+
+/*
+  Media queries
+*/
+
+@media (max-width: 871px) {
+  .breadcrumbs-container {
+    display: none;
+  }
+
+  #OxLogo {
+    width: 100%;
+    height: auto;
+  }
+  .mainpage-container {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+  .titles {
+    font-size: 27px;
+  }
+  #smart-contract-address {
+    display: none;
+  }
+  #smart-contract-address-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 871px) {
+  .menu-icon-container {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 846px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
