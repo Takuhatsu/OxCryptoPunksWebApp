@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fc23a900.css",
-    "main.js": "/static/js/main.470701c1.js",
+    "main.js": "/static/js/main.b314c4c0.js",
     "static/js/787.ca274188.chunk.js": "/static/js/787.ca274188.chunk.js",
     "static/media/MonumentGrotesk-Italic.ttf": "/static/media/MonumentGrotesk-Italic.38e3e6f7cc81a06f7bcd.ttf",
     "static/media/MonumentGrotesk-Regular.ttf": "/static/media/MonumentGrotesk-Regular.02c608d4045c684e70bb.ttf",
@@ -14,11 +14,11 @@
     "static/media/OxLogo.svg": "/static/media/OxLogo.b60e2287181de170ffbc4896629bf586.svg",
     "index.html": "/index.html",
     "main.fc23a900.css.map": "/static/css/main.fc23a900.css.map",
-    "main.470701c1.js.map": "/static/js/main.470701c1.js.map",
+    "main.b314c4c0.js.map": "/static/js/main.b314c4c0.js.map",
     "787.ca274188.chunk.js.map": "/static/js/787.ca274188.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc23a900.css",
-    "static/js/main.470701c1.js"
+    "static/js/main.b314c4c0.js"
   ]
 }
