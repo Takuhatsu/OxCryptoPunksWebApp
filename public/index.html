@@ -40,6 +40,15 @@
     }(window.location))
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
+  <!-- Add this script to handle client-side routing -->
+  <script>
+    (function () {
+      const script = document.createElement('script');
+      script.src = '../src/App.js';; // Update the path
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
   <title>OxCryptoPunks</title>
 </head>
 
