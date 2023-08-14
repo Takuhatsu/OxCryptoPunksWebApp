@@ -80,8 +80,9 @@ export const RenderPunk = () => {
 
       // Retrieve attributes if available
       try {
-        const attributes = await contract.punkAttributes(punkId);
-        setAttributes(attributes);
+        const attributesResponse = await contract.punkAttributes(punkId);
+        const attributesText = attributesResponse.text;
+        setAttributes(attributesText);
       } catch {
         setAttributes(null);
       }

@@ -169,7 +169,7 @@ const GalleryPage = () => {
               style={{
                 width: "192px",
                 height: "192px",
-                backgroundColor: "#648595",
+                backgroundColor: "#a5abb1",
                 imageRendering: "pixelated",
               }}
             />

@@ -32,7 +32,7 @@
       if (l.search[1] === '/') {
         var decoded = l.search.slice(1).split('&').map(function (s) {
           return s.replace(/~and~/g, '&')
-        }).join('#');
+        }).join('?');
         window.history.replaceState(null, null,
           l.pathname.slice(0, -1) + decoded + l.hash
         );
@@ -40,6 +40,16 @@
     }(window.location))
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
+
+  <!-- Load the JavaScript bundle for your React app -->
+<script>
+  (function () {
+    const script = document.createElement('script');
+    script.src = '../src/App.js'; 
+    script.async = true;
+    document.body.appendChild(script);
+  })();
+</script>
   <title>OxCryptoPunks</title>
 </head>
 
