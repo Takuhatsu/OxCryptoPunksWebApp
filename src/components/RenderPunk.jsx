@@ -121,7 +121,7 @@ export const RenderPunk = () => {
           style={{
             width: '240px',
             height: '240px',
-            backgroundColor: '#648595',
+            backgroundColor: '#a5abb1',
             position: 'relative', // Add position relative to the container
             marginTop: '1rem',
           }}
