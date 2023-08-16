@@ -10,7 +10,8 @@ export const RenderPunk = () => {
   const [svgImage, setSvgImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [attributes, setAttributes] = useState(null);
-  const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/90880ea69ac546a091223cba5f884868');
+  // const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/90880ea69ac546a091223cba5f884868');
+  const infuraProvider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/a6ef5c5c299b49cd95802b35e0681061');
 
   const handleLoadClick = async () => {
     try {
@@ -21,7 +22,7 @@ export const RenderPunk = () => {
       setIsLoading(true);
 
       // const contractAddress = '0x888a16eed949a9f19e16e9c131608153a65160c2';
-      const contractAddress = '0x16f5a35647d6f03d5d3da7b35409d65ba03af3b2';
+      const contractAddress = '0x4fD7Bd1A5Bea1104Dda1f1786229440002d455Ad';
       const contractABI = [
         {
           constant: true,
@@ -66,7 +67,7 @@ export const RenderPunk = () => {
           type: 'function',
         },
       ];
-      const contract = new ethers.Contract(contractAddress, contractABI, provider);
+      const contract = new ethers.Contract(contractAddress, contractABI, infuraProvider);
 
       const [svg] = await Promise.all([
         contract.punkImageSvg(punkId),

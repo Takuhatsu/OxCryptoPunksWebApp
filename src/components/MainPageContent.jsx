@@ -26,7 +26,7 @@ const MainPageContent = () => {
         collection utilizing IPFS to store images and metadata with fully
         on-chain implementation.
       </p>
-      <h1 className="titles">Render Punk from the Blockchain</h1>
+      <h1 className="titles">RENDER PUNK FROM THE BLOCKCHAIN</h1>
       <p className="pID">
         Type the punk's ID into the form and press the LOAD button. If the
         requested punk is already on the chain, it will be rendered.
@@ -60,10 +60,10 @@ const MainPageContent = () => {
         </figcaption>
       </div>
       <RenderPunk />
-      <h1 className="titles">About the Ox™</h1>
+      <h1 className="titles">ABOUT THE OX™</h1>
       <p className="text-web">
         We've recreated all the original CryptoPunks layers, added some new
-        unique attributes, invented the Pigeons type of characters, and
+        unique attributes, invented the Pigeons type, and
         generated 10,000 new CryptoPunks. The code we used for generating the
         collection is available on{" "}
         <a
@@ -76,7 +76,7 @@ const MainPageContent = () => {
         </a>
         .
       </p>
-      <h1 className="titles">Tech specs</h1>
+      <h1 className="titles">TECH SPECS</h1>
       <p className="text-web">
         This collection stores data in two ways: files on IPFS with links to
         them on the OxCryptoPunks smart contract, and the contract's internal
@@ -113,11 +113,11 @@ const MainPageContent = () => {
         be modifiable anymore.
       </p>
       <h1 id="scrollToMint" className="titles">
-        Mint a Punk
+        MINT A PUNK
       </h1>
       <Mint id="mint-section" />
       <h1 id="scrollToOnChain" className="titles">
-        On-chain
+        ON-CHAIN
       </h1>
       <p className="text-web">
         This collection stores data in two ways: files on IPFS with links to

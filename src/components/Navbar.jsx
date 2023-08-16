@@ -259,7 +259,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
               }}
               to='/manifesto'
             >
-              MANIFEST
+              MANIFESTO
             </Link>
           </Breadcrumbs>
         </div>
@@ -288,7 +288,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
             }}
             to={mintLinkDestination}
           >
-            Mint a Punk
+            MINT A PUNK
           </Link>
           <Link
             className='mobile-menu-link'
@@ -298,7 +298,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
             }}
             to={onchainLinkDestination}
           >
-            On-Chain a Punk
+            ON-CHAIN A PUNK
           </Link>
           <Link
             className='mobile-menu-link'
@@ -308,7 +308,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
             }}
             to='/gallery'
           >
-            Gallery
+            GALLERY
           </Link>
           <Link
             className='mobile-menu-link'
@@ -318,7 +318,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
             }}
             to='/manifesto'
           >
-            Manifesto
+            MANIFESTO
           </Link>
         </div>
       )}

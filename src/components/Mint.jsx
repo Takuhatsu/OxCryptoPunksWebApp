@@ -7,7 +7,7 @@ import CustomButton from './CustomButton';
 const Mint = () => {
 
   const [numPunks, setNumPunks] = useState('');
-  const contractAddress = '0x5c84F21036CFEb00BB6ae499200824c5f87eC232';
+  const contractAddress = '0x4fD7Bd1A5Bea1104Dda1f1786229440002d455Ad';
   const contractABI = [
     {
       constant: false,

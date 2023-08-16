@@ -9,13 +9,16 @@ import LoadingAnimation from './LoadingAnimation';
 import BouncingBallAnimation from './BouncingBallAnimation';
 
 const OnchainPunk = () => {
+  // Web3 provider
+  const infuraProvider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/a6ef5c5c299b49cd95802b35e0681061');
+
   const [punkId, setPunkId] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [imagesCount, setImagesCount] = useState(null);
   const [attributesCount, setAttributesCount] = useState(null);
 
-  const contractAddress = '0x021C3D9F7f57Cd4B301cD0c54129896Cbc1F4d01';
+  const contractAddress = '0x4fD7Bd1A5Bea1104Dda1f1786229440002d455Ad';
   const contractABI = [
     // Existing ABI for addPunk function
     {
@@ -93,7 +96,7 @@ const OnchainPunk = () => {
           const contract = new ethers.Contract(
             contractAddress,
             contractABI,
-            signer
+            signer,
           );
 
           const index = parseInt(selectedPunk.OxCryptoPunk);
@@ -160,11 +163,10 @@ const OnchainPunk = () => {
 
   const handleGetPunkAttributesCountCall = async () => {
     try {
-      const provider = new ethers.providers.JsonRpcProvider(); // Use a JSON-RPC provider
       const contract = new ethers.Contract(
         contractAddress,
         contractABI,
-        provider
+        infuraProvider
       );
       const attributesCount = await contract.getPunkAttributesCount();
   
@@ -186,11 +188,10 @@ const OnchainPunk = () => {
 
   const handleGetPunkImagesCountCall = async () => {
     try {
-      const provider = new ethers.providers.JsonRpcProvider(); // Use a JSON-RPC provider
       const contract = new ethers.Contract(
         contractAddress,
         contractABI,
-        provider
+        infuraProvider
       );
       const imagesCount = await contract.getPunkImagesCount();
   
