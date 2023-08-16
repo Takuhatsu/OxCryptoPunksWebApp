@@ -1,66 +1,145 @@
-@font-face {
-  font-family: 'Ultra', serif;
-  src: url(./fonts/Ultra-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Monument Grotesk';
-  src: local('Monument Grotesk Regular'), local('Monument-Grotesk-Regular'),
-      url('./fonts/MonumentGrotesk-Regular.woff2') format('woff2'),
-      url('./fonts/MonumentGrotesk-Regular.woff') format('woff'),
-      url('./fonts/MonumentGrotesk-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monument Grotesk';
-  src: local('Monument Grotesk Italic'), local('Monument-Grotesk-Italic'),
-      url('./fonts/MonumentGrotesk-Italic.woff2') format('woff2'),
-      url('./fonts/MonumentGrotesk-Italic.woff') format('woff'),
-      url('./fonts/MonumentGrotesk-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
 body {
-  font-family: 'Monument Grotesk';
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   padding-left: 2rem;
   padding-right: 2rem;
-  line-height: 1.2;
+  line-height: 1.5;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+  html{
+    scrollbar-width: none;
+  }
+}
+body {
+  margin: 0; /* remove default margin */
+  scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+  -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0.5rem; /* Adjust as needed */
+  height: 100%;
+  background-color: transparent; /* Background color of the hidden scrollbar space */
+}
+
+/* Webkit browsers */
+body::-webkit-scrollbar {
+  width: 0.5rem; /* Set a width for the invisible scrollbar space */
 }
 
 .text-web-italic {
-  font-family: 'Monument Grotesk';
   font-style: italic;
+  color: #212121;
 }
 
 .text-web {
-  font-family: 'Monument Grotesk';
-  font-size: 18px;
-  font-weight: 200;
-  letter-spacing: -.01em;
-  color: #363636;
+  font-weight: 400;
+  color: #212121;
 }
 
 .navlink {
-  font-family: 'Monument Grotesk';
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400 !important;
   font-style: italic;
+  font-size: 0.8rem;
+  color: #6e6e73;
 }
 
 .link-in-text {
   text-decoration: none;
-  color:#ea34b0;
+  color:#0e0e0e;
+  background-color: #bfc500;
+  border-radius: 15px;
+  padding: 3px;
+  transition: color 0.5s;
 }
 
 .link-in-text:hover {
-  color:#363636;
-  transition: color 0.3s;
+  color: #fff;
 }
+
+/* Navbar section */
+
+/* Add this CSS to your existing CSS files or create a new one and import it in the Navbar component */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Change the background color as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Make sure the mobile menu appears above other elements */
+}
+
+.mobile-menu-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400 !important;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #212121; /* Change the text color as needed */
+}
+
+/* Styling for the menu icon and close icon */
+.menu-icon-container {
+  display: flex; /* Show the menu icon on mobile screens */
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Make the container relatively positioned */
+  z-index: 10000; /* Ensure the icons appear above other elements */
+}
+
+.close-icon {
+  position: absolute; /* Position the close icon absolutely */
+  top: 50%; /* Center the icon vertically */
+  left: 50%; /* Center the icon horizontally */
+  transform: translate(-50%, -50%); /* Center the icon perfectly */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.navlink:hover {
+  color: #bfc500 !important;
+  /* Additional styling for the link when hovering can be added here */
+}
+
+
+@media (min-width: 871px) {
+  /* Hide the mobile menu on non-mobile screens */
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Show the menu icon on non-mobile screens */
+  .menu-icon-container {
+    display: none;
+  }
+}
+
+/* End of the Navbar section */
 
 p {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+}
+
+.pID {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .mint-form {
@@ -68,7 +147,6 @@ p {
   align-items: center; /* Align items vertically */
   justify-content: center; /* Align items horizontally */
   width: 100%;
-  background-color: rgb(255, 255, 255);
 }
 
 .css-1f7jt3g-MuiFormControl-root-MuiTextField-root.css-1f7jt3g-MuiFormControl-root-MuiTextField-root {
@@ -89,9 +167,12 @@ p {
   background-color: #a5abb1;
 }
 
+.title-image-m {
+  display: none;
+}
+
 
 .dropdown-menu {
-  font-family: 'Monument Grotesk';
   font-style: italic;
   font-weight: 100;
 }
@@ -101,8 +182,9 @@ p {
 }
 
 .titles {
-  font-family: 'Ultra', serif;
-  color: #363636;
+  color: #212121;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .App {
@@ -120,9 +202,18 @@ p {
   height: auto;
 }
 
-#OxLogo img {
+.OxLogoSVG {
   width: 100%;
   height: auto;
+  fill: #a5abb1;;
+}
+
+.OxLogoFlowerSVG {
+  fill: #a5abb1;;
+}
+
+.OxLogoSlashSeparatorSVG {
+  fill: #a5abb1;;
 }
 
 .menu-icon-container {
@@ -163,15 +254,38 @@ p {
 .image {
   width: 100%;
   image-rendering: pixelated;
+  display: block; /* Ensure proper spacing around the image */
 }
 
 .caption {
   font-style: italic;
   font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.attCaption {
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.attention-container {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center; /* Vertically align the SVG and figcaption */
+  gap: 6px; /* Add some spacing between SVG and figcaption */
+}
+
+.svg-container {
+  position: relative;
+  width: 29px; /* Adjust the width of the SVG container as needed */
 }
 
 .no-rounded-border .MuiFilledInput-root {
-  font-family: 'Monument Grotesk';
+
   border-radius: 0;
 }
 
@@ -185,7 +299,7 @@ p {
 .return-attributes-count {
   display: flex;
   font-style: italic;
-  color:#ea34b0;
+  color:#bfc500;
   justify-content: center;
 }
 
@@ -197,6 +311,8 @@ p {
 }
 
 #punkAttributes {
+  font-weight: 400;
+  font-style: italic;
   width: 240px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -205,7 +321,7 @@ p {
 .separate-line {
   height: 2px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(110, 110, 115, 0.2);
 }
 
 /*
@@ -266,11 +382,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.pagination-buttons button {
-  margin: 0 0.5rem;
-}
-
-
 /*
   End of Gallery section
 */
@@ -303,9 +414,10 @@ p {
   justify-content: space-between;
 }
 
-.footer-logo img {
+.RDLogo {
   height: 2rem;
   margin-right: auto;
+  fill: #a5abb1; /* Set the default color */
 }
 
 .footer-social-icons {
@@ -324,7 +436,8 @@ p {
 
 .footer-social-icons a {
   margin-left: 1rem;
-  color: #666666;
+  color: #a5abb1;
+  transition: 0.5s;
 }
 
 .footer-social-icons a svg {
@@ -333,12 +446,12 @@ p {
 }
 
 .footer-social-icons a:hover {
-  color: #ea34b0;
+  color: #bfc500;
 }
 
 .footer-social-icons p {
   margin-top: 1rem; /* Add margin-top to create spacing between icons and text */
-  color: #666666;
+  color: #a5abb1;;
 }
 
 #tos {
@@ -380,6 +493,17 @@ p {
   }
 }
 
+@media (max-width: 700px) {
+  .title-image {
+    display: none;
+  }
+
+  .title-image-m {
+    display: block;
+    background-color: #a5abb1;
+  }
+}
+
 @media (min-width: 871px) {
   .menu-icon-container {
     display: none;
@@ -403,3 +527,41 @@ p {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* @media (max-width: 600px) {
+.css-r6ewbb-MuiToolbar-root {
+    min-height: 22px !important;
+}
+} */
+
+/* Overwriting MUI styles */
+.css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: italic;
+}
+
+.css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #a5abb1 !important;
+}
+
+.css-2y464i-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled,
+.Mui-error):before {
+  border-bottom:1px solid #bfc500 !important;
+}
+
+/* Input label */
+
+.css-o943dk-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-style: italic !important;
+}
+
+.css-1s64528-MuiFormControl-root-MuiTextField-root.css-1s64528-MuiFormControl-root-MuiTextField-root label {
+  color:#a5abb1 !important;
+}
+
+/* End of input label */

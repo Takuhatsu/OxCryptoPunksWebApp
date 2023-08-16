@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Monument Grotesk';
+    src: local('Monument Grotesk Medium Italic'), local('Monument-Grotesk-Medium-Italic'),
+        url('MonumentGrotesk-MediumItalic.woff2') format('woff2'),
+        url('MonumentGrotesk-MediumItalic.woff') format('woff'),
+        url('MonumentGrotesk-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+  }

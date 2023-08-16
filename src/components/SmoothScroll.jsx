@@ -4,8 +4,8 @@ export const scrollToSectionSmoothly = (sectionId, duration = 500) => {
   const section = document.getElementById(sectionId);
   if (!section) return;
 
-  const targetPosition = section.getBoundingClientRect().top;
-  const startPosition = window.pageYOffset || document.documentElement.scrollTop;
+  const targetPosition = section.getBoundingClientRect().top + window.scrollY; // Calculate relative to the window's top
+  const startPosition = window.scrollY; // Get current scroll position
   const startTime = performance.now();
 
   const scrollStep = (timestamp) => {

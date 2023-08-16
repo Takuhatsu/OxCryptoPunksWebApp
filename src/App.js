@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import Terms from './components/Terms';
 
 const App = () => {
-
   
   return (
     <HashRouter basename={process.env.PUBLIC_URL}> {/* Set basename */}

@@ -9,18 +9,16 @@ export const RenderPunk = () => {
   const [punkId, setPunkId] = useState('');
   const [svgImage, setSvgImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [previousPunkId, setPreviousPunkId] = useState('');
   const [attributes, setAttributes] = useState(null);
   const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/90880ea69ac546a091223cba5f884868');
 
   const handleLoadClick = async () => {
     try {
-      if (punkId === previousPunkId) {
-        return; // Skip if the current punkId is the same as the previous one
-      }
+      // if (punkId === previousPunkId) {
+      //   return; // Skip if the current punkId is the same as the previous one
+      // }
 
       setIsLoading(true);
-      setPreviousPunkId(punkId); // Update the previousPunkId state
 
       // const contractAddress = '0x888a16eed949a9f19e16e9c131608153a65160c2';
       const contractAddress = '0x16f5a35647d6f03d5d3da7b35409d65ba03af3b2';
@@ -80,9 +78,8 @@ export const RenderPunk = () => {
 
       // Retrieve attributes if available
       try {
-        const attributesResponse = await contract.punkAttributes(punkId);
-        const attributesText = attributesResponse.text;
-        setAttributes(attributesText);
+        const attributes = await contract.punkAttributes(punkId);
+        setAttributes(attributes);
       } catch {
         setAttributes(null);
       }
@@ -98,7 +95,7 @@ export const RenderPunk = () => {
   }, [svgImage]);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Box component='form' noValidate autoComplete='off'>
         <div
           style={{

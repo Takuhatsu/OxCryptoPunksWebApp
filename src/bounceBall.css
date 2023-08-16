@@ -29,7 +29,7 @@
   width: var(--width);
   height: var(--height);
   border-radius: 50%;
-  background-color: #ea34b0;
+  background-color: #bfc500;
   transform-origin: 50%;
   animation: bounceBall 500ms alternate infinite ease; 
 }

@@ -4,46 +4,80 @@ import { RenderPunk } from './RenderPunk';
 import Mint from './Mint';
 import OnchainPunk from './OnchainPunk';
 import PunkVar from '../images/PunkVariety.png'
+import PunkVarM from '../images/PunkVarietyM.png'
 
 const MainPageContent = () => {
 
   return (
-    <div className='mainpage-container'>
-      <div className='title-image'>
-       <img className='image' src={PunkVar} alt='Punk Variety' /> 
-       </div>
-       <figcaption className='caption'>Strongly influenced by CryptoPunks™</figcaption>
-      <p className='text-web'>
+    <div className="mainpage-container">
+      <div className="title-image">
+        <img className="image" src={PunkVar} alt="Punk Variety" />
+      </div>
+      <div className="title-image-m">
+        <img className="image" src={PunkVarM} alt="Punk Variety" />
+      </div>
+      <figcaption className="caption">
+        Strongly influenced by CryptoPunks™
+      </figcaption>
+      <p className="text-web">
         10,000 unique collectible characters, with proof of ownership stored as
         binary code on the Ethereum blockchain, which can be retrieved and
         rendered as a final image. This project is a combo of a classic NFT
         collection utilizing IPFS to store images and metadata with fully
         on-chain implementation.
       </p>
-      <h1 className='titles'>Render Punk from the Blockchain</h1>
-      <p className='text-web'>
+      <h1 className="titles">Render Punk from the Blockchain</h1>
+      <p className="pID">
         Type the punk's ID into the form and press the LOAD button. If the
         requested punk is already on the chain, it will be rendered.
       </p>
+      <div className="attention-container">
+        <div className='svg-container'>
+          <svg
+            data-v-86a7af3e=""
+            width="29"
+            height="26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" fillRule="evenodd">
+              <path
+                stroke="#bfc500"
+                strokeWidth="2"
+                strokeLinejoin="round"
+                d="M9.686 25h-8.5l13-24 13 24h-8"
+              ></path>
+              <path
+                d="M15.134 21.478l.893-8.398v-.38h-3.382v.38l.893 8.398h1.596zM15.875 26v-3.04h-3.078V26h3.078z"
+                fill="#bfc500"
+                fillRule="nonzero"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <figcaption className="attCaption">
+          If a specific punk doesn't render, it means it's not on the chain yet.
+          Read more in the On-Chain section below.
+        </figcaption>
+      </div>
       <RenderPunk />
-      <h1 className='titles'>About the Ox™</h1>
-      <p className='text-web'>
+      <h1 className="titles">About the Ox™</h1>
+      <p className="text-web">
         We've recreated all the original CryptoPunks layers, added some new
         unique attributes, invented the Pigeons type of characters, and
         generated 10,000 new CryptoPunks. The code we used for generating the
-        collection is available on{' '}
+        collection is available on{" "}
         <a
-          className='link-in-text'
-          href='https://github.com/Takuhatsu/oxcryptopunks-image-generator'
-          target='_blank'
-          rel='noreferrer'
+          className="link-in-text"
+          href="https://github.com/Takuhatsu/oxcryptopunks-image-generator"
+          target="_blank"
+          rel="noreferrer"
         >
           Github
         </a>
         .
       </p>
-      <h1 className='titles'>Tech specs</h1>
-      <p className='text-web'>
+      <h1 className="titles">Tech specs</h1>
+      <p className="text-web">
         This collection stores data in two ways: files on IPFS with links to
         them on the OxCryptoPunks smart contract, and the contract's internal
         storage. All attributes are stored as an array of strings and there is a
@@ -55,34 +89,37 @@ const MainPageContent = () => {
         calls the function that encodes the punk's attributes into a readable
         format and renders it on this page.
       </p>
-      <p className='text-web'>
+      <p className="text-web">
         But first, we need to populate the internal storage with data. We
         decided to entrust this to the community. To put an OxPunk on chain, you
-        need to go to the{' '}
-        <Link className='link-in-text' to='/onchainpunk'>
+        need to go to the{" "}
+        <Link className="link-in-text" to="/onchainpunk">
           On-Chain
-        </Link>{' '}
-        page, enter the punk’s ID, and press <span className='text-web-italic'>ADD PUNK</span>. This will push byte
+        </Link>{" "}
+        page, enter the punk’s ID, and press{" "}
+        <span className="text-web-italic">ADD PUNK</span>. This will push byte
         data of a punk to the internal storage of the OxCryptoPunks smart
-        contract. <span className='text-web-italic'>ADD ATTRIBUTES</span> will
-        push the attributes list of the selected punk to the blockchain. Punks can
-        only be inserted to the blockchain in sequential order. On the{' '}
-        <Link className='link-in-text' to='/onchainpunk'>
+        contract. <span className="text-web-italic">ADD ATTRIBUTES</span> will
+        push the attributes list of the selected punk to the blockchain. Punks
+        can only be inserted to the blockchain in sequential order. On the{" "}
+        <Link className="link-in-text" to="/onchainpunk">
           On-Chain
-        </Link>{' '}
-        page, under the <span className='text-web-italic'>ADD PUNK</span> and{' '}
-        <span className='text-web-italic'>ADD ATTRIBUTES</span> form, you will
+        </Link>{" "}
+        page, under the <span className="text-web-italic">ADD PUNK</span> and{" "}
+        <span className="text-web-italic">ADD ATTRIBUTES</span> form, you will
         see the information about the next available image ID and attributes ID
         for onchaining. After all punks and all attributes are on the
         blockchain, we will seal the contract and the internal storage will not
         be modifiable anymore.
       </p>
-      <h1 id='scrollToMint' className='titles'>
+      <h1 id="scrollToMint" className="titles">
         Mint a Punk
       </h1>
-      <Mint id='mint-section' />
-      <h1 id='scrollToOnChain' className='titles'>On-chain</h1>
-      <p className='text-web'>
+      <Mint id="mint-section" />
+      <h1 id="scrollToOnChain" className="titles">
+        On-chain
+      </h1>
+      <p className="text-web">
         This collection stores data in two ways: files on IPFS with links to
         them on the OxCryptoPunks smart contract, and the contract's internal
         storage. All attributes are stored as an array of strings and there is a
@@ -95,18 +132,28 @@ const MainPageContent = () => {
         format and renders it on this page.
       </p>
       <OnchainPunk />
-      <p id='smart-contract-address' className='text-web'>VERIFIED SMART CONTRACT ADDRESS: <a
-          className='link-in-text'
-          href='https://github.com/Takuhatsu/oxcryptopunks-image-generator'
-          target='_blank'
-          rel='noreferrer'
-        >0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D</a></p>
-        <p id='smart-contract-address-mobile' className='text-web'>VERIFIED SMART CONTRACT ADDRESS: <a
-          className='link-in-text'
-          href='https://github.com/Takuhatsu/oxcryptopunks-image-generator'
-          target='_blank'
-          rel='noreferrer'
-        >0xBC4CA0E...8a936f13D</a></p>
+      <p id="smart-contract-address" className="text-web">
+        VERIFIED SMART CONTRACT ADDRESS:{" "}
+        <a
+          className="link-in-text"
+          href="https://github.com/Takuhatsu/oxcryptopunks-image-generator"
+          target="_blank"
+          rel="noreferrer"
+        >
+          0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
+        </a>
+      </p>
+      <p id="smart-contract-address-mobile" className="text-web">
+        VERIFIED SMART CONTRACT ADDRESS:{" "}
+        <a
+          className="link-in-text"
+          href="https://github.com/Takuhatsu/oxcryptopunks-image-generator"
+          target="_blank"
+          rel="noreferrer"
+        >
+          0xBC4CA0E...8a936f13D
+        </a>
+      </p>
     </div>
   );
 };

@@ -186,13 +186,14 @@ const GalleryPage = () => {
         >
           <ArrowCircleLeftIcon
            sx={{
-            color: '#666666',
-            opacity: currentPage === 0 ? 0.3 : 1, 
+            color: '#a5abb1',
+            opacity: currentPage === 0 ? 0.3 : 1,
+            transition: 'color 0.5s',
 
             ...(currentPage !== 0
               ? {
                   '&:hover': {
-                    color: '#ea34b0',
+                    color: '#bfc500',
                   },
                 }
               : {}),
@@ -210,13 +211,14 @@ const GalleryPage = () => {
         >
           <ArrowCircleRightIcon
           sx={{
-            color: '#666666',
+            color: '#a5abb1',
             opacity: hasNextPage ? 1 : 0.3,
             pointerEvents: hasNextPage ? 'auto' : 'none',
+            transition: 'color 0.5s',
             ...(hasNextPage
               ? {
                   '&:hover': {
-                    color: '#ea34b0',
+                    color: '#bfc500',
                   },
                 }
               : {}),
