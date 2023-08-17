@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Monument Grotesk';
-    src: local('Monument Grotesk Bold'), local('Monument-Grotesk-Bold'),
-        url('MonumentGrotesk-Bold.woff2') format('woff2'),
-        url('MonumentGrotesk-Bold.woff') format('woff'),
-        url('MonumentGrotesk-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }
