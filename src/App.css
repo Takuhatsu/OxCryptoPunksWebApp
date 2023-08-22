@@ -1,8 +1,9 @@
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
   line-height: 1.5;
   -ms-overflow-style: none; /* IE and Edge */
 }
@@ -36,6 +37,12 @@ body::before {
 /* Webkit browsers */
 body::-webkit-scrollbar {
   width: 0.5rem; /* Set a width for the invisible scrollbar space */
+}
+
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
 
 .text-web-italic {
@@ -72,7 +79,17 @@ body::-webkit-scrollbar {
 
 /* Navbar section */
 
-/* Add this CSS to your existing CSS files or create a new one and import it in the Navbar component */
+.navbar-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -164,8 +181,12 @@ p {
 }
 
 .title-image {
+  position: relative; /* Set the parent div to a positioned element */
+  overflow: visible;
+  height: auto;
   width: 100%;
   background-color: #a5abb1;
+  text-shadow: 0 0 20px , 0 0 40px, 0 0 80px , 0 0 100px;
 }
 
 .title-image-m {
@@ -190,7 +211,7 @@ p {
 
 .App {
   padding-top: 0.4rem;
-  max-width: 1200px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   /* To avoid content flickering while page is loading */
@@ -254,7 +275,7 @@ p {
 
 .image {
   width: 100%;
-  image-rendering: pixelated;
+  /* image-rendering: pixelated; */
   display: block; /* Ensure proper spacing around the image */
 }
 
@@ -331,14 +352,14 @@ p {
 
 .search-bar{
   display: flex;
-  width: 100%;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1rem;
 }
 
 .search-input {
-  flex: 3;
+  flex: 4;
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
@@ -347,7 +368,7 @@ p {
   flex: 1;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  padding-right: 1rem;
+
 }
 
 .reset-button {
@@ -357,24 +378,23 @@ p {
 }
 
 .gallery-container {
-  display: grid;
-  grid-gap: 0.5rem; /* Decreased margin between images */
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin: auto;
 }
 
-.gallery-container .image-item {
-  margin-left: auto;
-  margin-right: auto;
+.image-item img{
+  width: 240px; /* Set the width of each image */
+  height: 240px; /* Set the height of each image */
+  margin-right: 0.5rem; /* Add some horizontal spacing between images */
+  margin-bottom: 0.5rem; /* Add some vertical spacing between rows */
+  box-sizing: border-box; /* Include padding and border in width/height */
 }
 
-.gallery-container .image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
+
 
 .pagination-buttons {
   display: flex;
@@ -479,7 +499,7 @@ p {
     width: 100%;
     height: auto;
   }
-  .mainpage-container {
+  .content-wrapper {
     margin-left: 0.1rem;
     margin-right: 0.1rem;
   }
@@ -494,7 +514,7 @@ p {
   }
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .title-image {
     display: none;
   }
@@ -503,9 +523,9 @@ p {
     display: block;
     background-color: #a5abb1;
   }
-}
+} */
 
-@media (min-width: 871px) {
+/* @media (min-width: 871px) {
   .menu-icon-container {
     display: none;
   }
@@ -521,13 +541,13 @@ p {
   .gallery-container {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
+} */
+/* 
 @media (min-width: 1200px) {
   .gallery-container {
     grid-template-columns: repeat(4, 1fr);
   }
-}
+} */
 
 /* @media (max-width: 600px) {
 .css-r6ewbb-MuiToolbar-root {
@@ -566,3 +586,170 @@ p {
 }
 
 /* End of input label */
+
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+.crt {
+  animation: textShadow 1.6s infinite;
+}
+
+
+
+
+

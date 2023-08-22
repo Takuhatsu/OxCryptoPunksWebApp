@@ -5,17 +5,21 @@ import Mint from './Mint';
 import OnchainPunk from './OnchainPunk';
 import PunkVar from '../images/PunkVariety.png'
 import PunkVarM from '../images/PunkVarietyM.png'
+import punkIntro from '../images/LOAD.mp4'
 
 const MainPageContent = () => {
 
   return (
-    <div className="mainpage-container">
+    <div className="App">
       <div className="title-image">
-        <img className="image" src={PunkVar} alt="Punk Variety" />
+        <div className='crt'>
+        <video className="image" src={punkIntro} alt="Punk Variety" autoPlay loop muted />
+        </div>
       </div>
       <div className="title-image-m">
         <img className="image" src={PunkVarM} alt="Punk Variety" />
       </div>
+      <div className='content-wrapper'>
       <figcaption className="caption">
         Strongly influenced by CryptoPunks™
       </figcaption>
@@ -154,6 +158,7 @@ const MainPageContent = () => {
           0xBC4CA0E...8a936f13D
         </a>
       </p>
+      </div>
     </div>
   );
 };

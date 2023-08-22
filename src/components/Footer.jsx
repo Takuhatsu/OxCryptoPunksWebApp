@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
+      <div className='footer-wrapper'>
       <footer className='footer'>
         <div className='footer-content'>
           <div className='footer-logo'>
@@ -43,6 +44,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      </div>
     );
   };
   

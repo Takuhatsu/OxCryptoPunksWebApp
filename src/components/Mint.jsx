@@ -7,7 +7,7 @@ import CustomButton from './CustomButton';
 const Mint = () => {
 
   const [numPunks, setNumPunks] = useState('');
-  const contractAddress = '0x4fD7Bd1A5Bea1104Dda1f1786229440002d455Ad';
+  const contractAddress = '0xfBF273A6A0100AE8317D65DdB19312f4071C6293';
   const contractABI = [
     {
       constant: false,
@@ -24,7 +24,7 @@ const Mint = () => {
       type: 'function',
     },
   ];
-  const punkPrice = ethers.utils.parseEther('0.007');
+  const punkPrice = ethers.utils.parseEther('0.000000000000000007');
 
 
   const handleMint = async () => {

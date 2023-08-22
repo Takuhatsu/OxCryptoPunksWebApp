@@ -42,6 +42,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
   const onchainLinkDestination = activeLink === '/' ? '#onchain' : '/';
 
   return (
+    <div className='navbar-wrapper'>
     <AppBar
       className={className}
       position='static'
@@ -323,6 +324,7 @@ const Navbar = ({ className, onMintLinkClick }) => {
         </div>
       )}
     </AppBar>
+    </div>
   );
 };
 

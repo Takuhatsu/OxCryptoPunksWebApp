@@ -10,7 +10,7 @@ import BouncingBallAnimation from './BouncingBallAnimation';
 
 const OnchainPunk = () => {
   // Web3 provider
-  const infuraProvider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/a6ef5c5c299b49cd95802b35e0681061');
+  const infuraProvider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/0eaaa29755f44904aa391055a05c4b39');
 
   const [punkId, setPunkId] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -18,7 +18,7 @@ const OnchainPunk = () => {
   const [imagesCount, setImagesCount] = useState(null);
   const [attributesCount, setAttributesCount] = useState(null);
 
-  const contractAddress = '0x4fD7Bd1A5Bea1104Dda1f1786229440002d455Ad';
+  const contractAddress = '0xfBF273A6A0100AE8317D65DdB19312f4071C6293';
   const contractABI = [
     // Existing ABI for addPunk function
     {
@@ -49,20 +49,20 @@ const OnchainPunk = () => {
     {
       inputs: [
         {
-          internalType: 'uint16[]',
-          name: 'indexes',
-          type: 'uint16[]',
+          internalType: "uint16",
+          name: "index",
+          type: "uint16"
         },
         {
-          internalType: 'uint8[][]',
-          name: 'attributeIndices',
-          type: 'uint8[][]',
-        },
+          internalType: "uint8[]",
+          name: "attributeIndices",
+          type: "uint8[]"
+        }
       ],
-      name: 'addToPunkAttributesMap',
+      name: "addToPunkAttributesMap",
       outputs: [],
-      stateMutability: 'nonpayable',
-      type: 'function',
+      stateMutability: "nonpayable",
+      type: "function"
     },
 
     {
@@ -143,8 +143,8 @@ const OnchainPunk = () => {
           setIsLoading(true); // Start loading animation
 
           const transaction = await contract.addToPunkAttributesMap(
-            [index],
-            [attributes]
+            index,
+            attributes
           );
           await transaction.wait();
           setSuccessMessage('Attributes added successfully!');
