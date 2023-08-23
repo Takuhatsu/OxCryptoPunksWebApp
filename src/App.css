@@ -136,19 +136,6 @@ body::-webkit-scrollbar {
   /* Additional styling for the link when hovering can be added here */
 }
 
-
-@media (min-width: 871px) {
-  /* Hide the mobile menu on non-mobile screens */
-  .mobile-menu {
-    display: none;
-  }
-
-  /* Show the menu icon on non-mobile screens */
-  .menu-icon-container {
-    display: none;
-  }
-}
-
 /* End of the Navbar section */
 
 p {
@@ -180,7 +167,7 @@ p {
   margin-bottom: 1rem !important;
 }
 
-.title-image {
+.hero-video {
   position: relative; /* Set the parent div to a positioned element */
   overflow: visible;
   height: auto;
@@ -188,11 +175,6 @@ p {
   background-color: #a5abb1;
   text-shadow: 0 0 20px , 0 0 40px, 0 0 80px , 0 0 100px;
 }
-
-.title-image-m {
-  display: none;
-}
-
 
 .dropdown-menu {
   font-style: italic;
@@ -490,7 +472,7 @@ p {
   Media queries
 */
 
-@media (max-width: 871px) {
+@media (max-width: 912px) {
   .breadcrumbs-container {
     display: none;
   }
@@ -514,40 +496,25 @@ p {
   }
 }
 
-/* @media (max-width: 700px) {
-  .title-image {
+@media (min-width: 912px) {
+  /* Hide the mobile menu on non-mobile screens */
+  .mobile-menu {
     display: none;
   }
 
-  .title-image-m {
-    display: block;
-    background-color: #a5abb1;
-  }
-} */
-
-/* @media (min-width: 871px) {
+  /* Show the menu icon on non-mobile screens */
   .menu-icon-container {
     display: none;
   }
 }
 
-@media (min-width: 700px) {
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1244px) {
+  .content-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-@media (min-width: 846px) {
-  .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-/* 
-@media (min-width: 1200px) {
-  .gallery-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-} */
 
 /* @media (max-width: 600px) {
 .css-r6ewbb-MuiToolbar-root {
@@ -587,6 +554,9 @@ p {
 
 /* End of input label */
 
+
+
+/* CRT effects starts here */
 
 @keyframes flicker {
   0% {
@@ -748,6 +718,9 @@ p {
 .crt {
   animation: textShadow 1.6s infinite;
 }
+
+/* CRT effects ends here */
+
 
 
 

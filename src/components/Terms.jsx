@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Terms = () => {
-    return <div className="mainpage-container">
+    return <div className="content-wrapper">
         <h1 className='titles'>
             TERMS & CONDITIONS - OxCryptoPunks NFT Collection
         </h1>
