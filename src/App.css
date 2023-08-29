@@ -206,18 +206,16 @@ p {
   height: auto;
 }
 
-.OxLogoSVG {
-  width: 100%;
-  height: auto;
-  fill: #a5abb1;;
+.loading-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
 }
 
-.OxLogoFlowerSVG {
-  fill: #a5abb1;;
-}
-
-.OxLogoSlashSeparatorSVG {
-  fill: #a5abb1;;
+#onchainLoading {
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .menu-icon-container {
@@ -298,6 +296,7 @@ p {
 .success-message {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .return-attributes-count {
@@ -719,7 +718,54 @@ p {
   animation: textShadow 1.6s infinite;
 }
 
+
+@media (max-width: 600px) {
+  .crt::after {
+    animation: flicker 0.15s infinite;
+  }
+
+  .crt::before {
+    background-size: 70% 1px, 1.5px 70%; /* Adjusted size values */
+  }
+}
+
 /* CRT effects ends here */
+
+
+
+
+
+
+
+/* Additional styling for the punk image */
+.punkImageBg {
+  min-height: 384px;
+  background-color: #a5abb1;
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+  justify-content: center; /* Center the image horizontally */
+  position: relative; /* Set relative positioning for positioning of .punkDetailsImage */
+}
+
+.punkDetailsImage {
+  width: 100%;
+  height: auto;
+  max-height: 384px;
+  max-width: 384px;
+  image-rendering: pixelated;
+  position: absolute; /* Set absolute positioning to stick it to the bottom */
+  bottom: 0; /* Align to the bottom */
+}
+
+/* Emoji section */
+
+.emoji-image {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle; /* To align the image with the text */
+}
+
+/* The end of the emoji section */
 
 
 

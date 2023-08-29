@@ -10,7 +10,7 @@ import BouncingBallAnimation from './BouncingBallAnimation';
 
 const OnchainPunk = () => {
   // Web3 provider
-  const infuraProvider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/0eaaa29755f44904aa391055a05c4b39');
+  const infuraProvider = new ethers.providers.JsonRpcProvider('https://goerli.infura.io/v3/1a73e3cf898942dd9fd748aedba6a430');
 
   const [punkId, setPunkId] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -18,7 +18,7 @@ const OnchainPunk = () => {
   const [imagesCount, setImagesCount] = useState(null);
   const [attributesCount, setAttributesCount] = useState(null);
 
-  const contractAddress = '0xfBF273A6A0100AE8317D65DdB19312f4071C6293';
+  const contractAddress = '0x3e83D6adcBe766F51D7223A14A10abD81daBDF3E';
   const contractABI = [
     // Existing ABI for addPunk function
     {
@@ -40,7 +40,7 @@ const OnchainPunk = () => {
           type: 'bytes',
         },
       ],
-      name: 'addPunk',
+      name: 'addPunkImage',
       outputs: [],
       stateMutability: 'nonpayable',
       type: 'function',
@@ -59,7 +59,7 @@ const OnchainPunk = () => {
           type: "uint8[]"
         }
       ],
-      name: "addToPunkAttributesMap",
+      name: "addToPunkAttributesVault",
       outputs: [],
       stateMutability: "nonpayable",
       type: "function"
@@ -104,7 +104,7 @@ const OnchainPunk = () => {
 
           setIsLoading(true); // Start loading animation
 
-          const transaction = await contract.addPunk(index, hexValue);
+          const transaction = await contract.addPunkImage(index, hexValue);
           await transaction.wait();
           setSuccessMessage('Punk added successfully!');
         } else {
@@ -112,6 +112,7 @@ const OnchainPunk = () => {
         }
       } catch (error) {
         console.log('Error adding punk:', error);
+        setSuccessMessage(`You do not own this punk, or its already on-chain!`);
       } finally {
         setIsLoading(false); // Stop loading animation
       }
@@ -142,7 +143,7 @@ const OnchainPunk = () => {
 
           setIsLoading(true); // Start loading animation
 
-          const transaction = await contract.addToPunkAttributesMap(
+          const transaction = await contract.addToPunkAttributesVault(
             index,
             attributes
           );
@@ -264,7 +265,11 @@ const OnchainPunk = () => {
             ? attributesCount.toString()
             : <BouncingBallAnimation />}
         </div>
+        <div className='loading-container'>
+        <div id='onchainLoading'>
         {isLoading && <LoadingAnimation />}
+        </div>
+        </div>
         {successMessage && (
           <div className='success-message'>{successMessage}</div>
         )}

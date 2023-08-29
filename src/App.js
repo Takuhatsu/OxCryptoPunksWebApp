@@ -9,6 +9,7 @@ import { BrowserRouter as HashRouter, Route, Routes } from 'react-router-dom';
 import SeparateLine from './components/SeparateLine';
 import Footer from './components/Footer';
 import Terms from './components/Terms';
+import PunkDetails from "./components/PunkDetails"; // Import the new component
 
 const App = () => {
   
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path='/onchainpunk' element={<OnchainPunk />} />
           <Route path='/gallery' element={<GalleryPage />} />
+          <Route path='/punks/:punkId' element={<PunkDetails />} />
           <Route path='/manifesto' element={<Manifesto />} />
           <Route path='/' element={<MainPageContent />} />
           <Route path='/terms' element={<Terms />} />

@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
 import bundledData from "../bundledData.json";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import CustomInput from "./CustomInput";
 import CustomButton from './CustomButton';
+import PunkDetails from "./PunkDetails"; // Import the new component
 
 const GalleryPage = () => {
   
@@ -13,14 +13,6 @@ const GalleryPage = () => {
   const [hasNextPage, setHasNextPage] = useState(true);
   const [searchKeywords, setSearchKeywords] = useState([]);
   const [filterKeywords, setFilterKeywords] = useState([]);
-
-  function extractPunkNumber(punkName) {
-    const matches = punkName.match(/\d+$/); // Find the last sequence of digits in the name
-    if (matches) {
-      return parseInt(matches[0], 10);
-    }
-    return 0; // Default value
-  }
 
   const [searchInputValue, setSearchInputValue] = useState(''); // State to control the input value
 
@@ -167,16 +159,10 @@ const GalleryPage = () => {
       </div>
       <div className="gallery-container">
         {paginatedImages.map((image, index) => (
-          
           <div 
           className="image-item" 
           key={`image-${startIndex + index}`}
           >
-            <Link
-          to={`/punks/${extractPunkNumber(image.name)}`} // Navigate to PunkDetails
-          className="image-item"
-          key={`image-${startIndex + index}`}
-        >
             <img
               className="image"
               src={image.imageSource}
@@ -188,10 +174,8 @@ const GalleryPage = () => {
                 imageRendering: "pixelated",
               }}
             />
-            </Link>
             <div className="text-web">{image.name}</div>
           </div>
-          
         ))}
         {renderEmptySpaces()}
       </div>
