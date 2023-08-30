@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.422c2954.css",
-    "main.js": "/static/js/main.6d131201.js",
+    "main.js": "/static/js/main.95c9e7bf.js",
     "static/js/787.ca274188.chunk.js": "/static/js/787.ca274188.chunk.js",
     "static/media/LOAD.mp4": "/static/media/LOAD.8df17906067561faf45b.mp4",
     "static/media/OxLogo.png": "/static/media/OxLogo.8d47816c7e6dd918656b.png",
@@ -9,11 +9,11 @@
     "static/media/white-down-pointing-backhand-index_1f447.png": "/static/media/white-down-pointing-backhand-index_1f447.7161da5feeab37a8fade.png",
     "index.html": "/index.html",
     "main.422c2954.css.map": "/static/css/main.422c2954.css.map",
-    "main.6d131201.js.map": "/static/js/main.6d131201.js.map",
+    "main.95c9e7bf.js.map": "/static/js/main.95c9e7bf.js.map",
     "787.ca274188.chunk.js.map": "/static/js/787.ca274188.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.422c2954.css",
-    "static/js/main.6d131201.js"
+    "static/js/main.95c9e7bf.js"
   ]
 }
