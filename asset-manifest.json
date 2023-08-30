@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c5e8310f.css",
-    "main.js": "/static/js/main.0acc5831.js",
+    "main.css": "/static/css/main.caaf928f.css",
+    "main.js": "/static/js/main.c2fd368f.js",
     "static/js/787.ca274188.chunk.js": "/static/js/787.ca274188.chunk.js",
     "static/media/LOAD.mp4": "/static/media/LOAD.8df17906067561faf45b.mp4",
     "static/media/OxLogo.png": "/static/media/OxLogo.8d47816c7e6dd918656b.png",
     "static/media/shocked-face-with-exploding-head_1f92f.png": "/static/media/shocked-face-with-exploding-head_1f92f.52cff1b3c2ed2283f076.png",
     "static/media/white-down-pointing-backhand-index_1f447.png": "/static/media/white-down-pointing-backhand-index_1f447.7161da5feeab37a8fade.png",
     "index.html": "/index.html",
-    "main.c5e8310f.css.map": "/static/css/main.c5e8310f.css.map",
-    "main.0acc5831.js.map": "/static/js/main.0acc5831.js.map",
+    "main.caaf928f.css.map": "/static/css/main.caaf928f.css.map",
+    "main.c2fd368f.js.map": "/static/js/main.c2fd368f.js.map",
     "787.ca274188.chunk.js.map": "/static/js/787.ca274188.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5e8310f.css",
-    "static/js/main.0acc5831.js"
+    "static/css/main.caaf928f.css",
+    "static/js/main.c2fd368f.js"
   ]
 }
