@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.caaf928f.css",
-    "main.js": "/static/js/main.ce910ffe.js",
+    "main.css": "/static/css/main.8aa29d85.css",
+    "main.js": "/static/js/main.8ad1c493.js",
     "static/js/787.ca274188.chunk.js": "/static/js/787.ca274188.chunk.js",
+    "static/media/BlackMarket_anim.mp4": "/static/media/BlackMarket_anim.5e5665a5a7a046fc1530.mp4",
     "static/media/LOAD.mp4": "/static/media/LOAD.8df17906067561faf45b.mp4",
     "static/media/OxLogo.png": "/static/media/OxLogo.8d47816c7e6dd918656b.png",
-    "static/media/shocked-face-with-exploding-head_1f92f.png": "/static/media/shocked-face-with-exploding-head_1f92f.52cff1b3c2ed2283f076.png",
-    "static/media/white-down-pointing-backhand-index_1f447.png": "/static/media/white-down-pointing-backhand-index_1f447.7161da5feeab37a8fade.png",
+    "static/media/MetaMask_Fox.png": "/static/media/MetaMask_Fox.50ecda6a9ca442e354cd.png",
+    "static/media/partying-face_1f973.png": "/static/media/partying-face_1f973.58e0da229c523890e9ec.png",
+    "static/media/dizzy-face_1f635.png": "/static/media/dizzy-face_1f635.28c7d2692775fa779a4a.png",
+    "static/media/neutral-face_1f610.png": "/static/media/neutral-face_1f610.62affdfab8d86787532a.png",
     "index.html": "/index.html",
-    "main.caaf928f.css.map": "/static/css/main.caaf928f.css.map",
-    "main.ce910ffe.js.map": "/static/js/main.ce910ffe.js.map",
+    "main.8aa29d85.css.map": "/static/css/main.8aa29d85.css.map",
+    "main.8ad1c493.js.map": "/static/js/main.8ad1c493.js.map",
     "787.ca274188.chunk.js.map": "/static/js/787.ca274188.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.caaf928f.css",
-    "static/js/main.ce910ffe.js"
+    "static/css/main.8aa29d85.css",
+    "static/js/main.8ad1c493.js"
   ]
 }
