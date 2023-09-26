@@ -3,11 +3,17 @@ import { ethers } from 'ethers';
 import Box from '@mui/material/Box';
 import CustomInput from './CustomInput';
 import CustomButton from './CustomButton';
+import LoadingAnimation from './LoadingAnimation';
+import dizzyFaceEmoji from '../images/emoji/dizzy-face_1f635.png';
+import partyFaceEmoji from '../images/emoji/partying-face_1f973.png';
 
 const Mint = () => {
 
   const [numPunks, setNumPunks] = useState('');
-  const contractAddress = '0x3e83D6adcBe766F51D7223A14A10abD81daBDF3E';
+  const [displayMessage, setDisplayMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const contractAddress = '0x5cC33e376A6438FA1c72b5085bc2C996F748253D';
   const contractABI = [
     {
       constant: false,
@@ -24,7 +30,7 @@ const Mint = () => {
       type: 'function',
     },
   ];
-  const punkPrice = ethers.utils.parseEther('0.007');
+  const punkPrice = ethers.utils.parseEther('0.005');
 
 
   const handleMint = async () => {
@@ -41,19 +47,48 @@ const Mint = () => {
   
         const num = parseInt(numPunks);
         const value = punkPrice.mul(num);
+
+        setIsLoading(true); // Start loading animation
+
         const mintTx = await contract.getPunk(num, {
           value: value,
         });
         await mintTx.wait();
-  
-        console.log('Punks minted successfully!');
+        const displayMessage = 'Minted!'
+        setDisplayMessage(
+          <div>
+            {displayMessage}{' '}
+            <img
+              src={partyFaceEmoji}
+              alt='Party Face'
+              className='emojiImage'
+            />
+          </div>
+        );
+        console.log('Successfully minted!');
       } else {
         console.log('MetaMask is not installed or not available.');
       }
 
     } catch (error) {
-      console.log('Error minting punks:', error);
-    }
+      let displayMessage = error.message;
+        if (displayMessage.includes('user rejected transaction')) {
+          displayMessage = 'Transaction has been rejected.'
+          setDisplayMessage(
+            <div>
+              {displayMessage}{' '}
+              <img
+                src={dizzyFaceEmoji}
+                alt='Dizzy Face'
+                className='emojiImage'
+              />
+            </div>
+          );
+        }
+        console.log(error);
+      } finally {
+        setIsLoading(false); // Stop loading animation
+      }
   };
 
   return (
@@ -77,6 +112,14 @@ const Mint = () => {
         <CustomButton onClick={handleMint}
         >Mint</CustomButton>
         </div>
+        <div className='loading-container'>
+        <div id='onchainLoading'>
+        {isLoading && <LoadingAnimation />}
+        </div>
+        </div>
+        {displayMessage && (
+          <div className='displayMessage'>{displayMessage}</div>
+        )}
       </Box>
     </div>
   );

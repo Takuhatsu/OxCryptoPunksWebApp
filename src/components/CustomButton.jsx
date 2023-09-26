@@ -1,7 +1,7 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
+import React from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
 
 const CustomButton = ({ onClick, children }) => {
   const StyledButton = styled(Button)`
@@ -34,7 +34,7 @@ const CustomButton = ({ onClick, children }) => {
 
   return (
     <StyledBox>
-      <StyledButton variant="contained" onClick={onClick}>
+      <StyledButton variant='contained' onClick={onClick}>
         {children}
       </StyledButton>
     </StyledBox>

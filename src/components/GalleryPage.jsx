@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
-import bundledData from "../bundledData.json";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
-import CustomInput from "./CustomInput";
+import React, { useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import bundledData from '../bundledData.json';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import CustomInput from './CustomInput';
 import CustomButton from './CustomButton';
 
 const GalleryPage = () => {
@@ -73,7 +73,7 @@ const GalleryPage = () => {
   
       setImages(allImages);
     } catch (error) {
-      console.error("Error fetching images:", error);
+      console.error('Error fetching images:', error);
     }
   }, []);
 
@@ -99,8 +99,8 @@ const GalleryPage = () => {
     const inputValue = event.target.value;
     setSearchInputValue(inputValue);
     const keywords = inputValue
-      .split(", ")
-      .filter((keyword) => keyword !== "");
+      .split(', ')
+      .filter((keyword) => keyword !== '');
   
     setFilterKeywords(keywords);
   };
@@ -139,7 +139,7 @@ const GalleryPage = () => {
 
     const emptySpaces = Array.from({ length: emptySpaceCount }).map(
       (_, index) => (
-        <div className="image-item empty" key={`empty-${startIndex + index}`} />
+        <div className='image-item empty' key={`empty-${startIndex + index}`} />
       )
     );
 
@@ -147,59 +147,59 @@ const GalleryPage = () => {
   };
 
   return (
-    <div className="App">
-      <div className="search-bar">
+    <div className='App'>
+      <div className='search-bar'>
         <div className='search-input'>
         <CustomInput
-          // value={filterKeywords.join(',')} //If not removed, we can't type "," and spacebar in the search field
+          // value={filterKeywords.join(',')} //If not removed, we can't type ',' and spacebar in the search field
           value={searchInputValue} // Use the controlled input value
           onChange={handleSearchInputChange}
-          label="Search by keywords"
+          label='Search by keywords'
           onKeyDown={onKeyDownHandler}
         />
         </div>
         <div className='search-button'>
-        <CustomButton variant="contained" onClick={handleSearchButtonClick}>Search</CustomButton>
+        <CustomButton variant='contained' onClick={handleSearchButtonClick}>Search</CustomButton>
         </div>
         <div className='reset-button'>
-        <CustomButton variant="contained" onClick={handleResetFilters}>Reset</CustomButton>
+        <CustomButton variant='contained' onClick={handleResetFilters}>Reset</CustomButton>
         </div>
       </div>
-      <div className="gallery-container">
+      <div className='gallery-container'>
         {paginatedImages.map((image, index) => (
           
           <div 
-          className="image-item" 
+          className='image-item' 
           key={`image-${startIndex + index}`}
           >
             <Link
           to={`/punks/${extractPunkNumber(image.name)}`} // Navigate to PunkDetails
-          className="image-item"
+          className='image-item'
           key={`image-${startIndex + index}`}
         >
             <img
-              className="image"
+              className='image'
               src={image.imageSource}
-              alt=""
+              alt=''
               style={{
-                width: "192px",
-                height: "192px",
-                backgroundColor: "#a5abb1",
-                imageRendering: "pixelated",
+                width: '192px',
+                height: '192px',
+                backgroundColor: '#a5abb1',
+                imageRendering: 'pixelated',
               }}
             />
             </Link>
-            <div className="text-web">{image.name}</div>
+            <div className='text-web'>{image.name}</div>
           </div>
           
         ))}
         {renderEmptySpaces()}
       </div>
-      <div className="pagination-buttons">
+      <div className='pagination-buttons'>
         <div
           onClick={currentPage !== 0 ? handlePreviousPage : null}
-          className={`pagination-button ${currentPage === 0 ? "disabled" : ""}`}
-          style={{ cursor: currentPage === 0 ? "not-allowed" : "pointer" }}
+          className={`pagination-button ${currentPage === 0 ? 'disabled' : ''}`}
+          style={{ cursor: currentPage === 0 ? 'not-allowed' : 'pointer' }}
         >
           <ArrowCircleLeftIcon
            sx={{
@@ -220,10 +220,10 @@ const GalleryPage = () => {
         <div
           onClick={currentPage !== totalPages - 1 ? handleNextPage : null}
           className={`pagination-button ${
-            currentPage === totalPages - 1 ? "disabled" : ""
+            currentPage === totalPages - 1 ? 'disabled' : ''
           }`}
           style={{
-            cursor: currentPage === totalPages - 1 ? "not-allowed" : "pointer",
+            cursor: currentPage === totalPages - 1 ? 'not-allowed' : 'pointer',
           }}
         >
           <ArrowCircleRightIcon

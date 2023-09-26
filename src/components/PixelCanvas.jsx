@@ -5,34 +5,34 @@ const PixelArtCanvas = () => {
   let canvas;
   let ctx;
   const scale = 6; // set the scale factor to 3
-  let currentColor = "black"; // set the initial color to black
+  let currentColor = 'black'; // set the initial color to black
 
   useEffect(() => {
     canvas = canvasRef.current;
-    ctx = canvas.getContext("2d");
+    ctx = canvas.getContext('2d');
 
     // Resize the canvas and the pixel size
     resizeCanvas();
 
-    canvas.addEventListener("click", handleClick);
+    canvas.addEventListener('click', handleClick);
 
-    const blackSelector = document.getElementById("black");
-    const redSelector = document.getElementById("red");
-    const blueSelector = document.getElementById("blue");
+    const blackSelector = document.getElementById('black');
+    const redSelector = document.getElementById('red');
+    const blueSelector = document.getElementById('blue');
 
-    blackSelector.addEventListener("click", () => {
-      currentColor = "black";
+    blackSelector.addEventListener('click', () => {
+      currentColor = 'black';
     });
 
-    redSelector.addEventListener("click", () => {
-      currentColor = "red";
+    redSelector.addEventListener('click', () => {
+      currentColor = 'red';
     });
 
-    blueSelector.addEventListener("click", () => {
-      currentColor = "blue";
+    blueSelector.addEventListener('click', () => {
+      currentColor = 'blue';
     });
 
-    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener('resize', resizeCanvas);
 
     fetch(`/get-canvas`)
       .then((response) => response.json())
@@ -49,8 +49,8 @@ const PixelArtCanvas = () => {
       });
 
     return () => {
-      canvas.removeEventListener("click", handleClick);
-      window.removeEventListener("resize", resizeCanvas);
+      canvas.removeEventListener('click', handleClick);
+      window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
 
@@ -58,7 +58,7 @@ const PixelArtCanvas = () => {
     // Adjust the position of the clicked pixel based on the scale factor
     const x = Math.floor(event.offsetX / scale);
     const y = Math.floor(event.offsetY / scale);
-    fetch(`/put-pixel?x=${x}&y=${y}&color=${currentColor}`, { method: "POST" }).then((response) => {});
+    fetch(`/put-pixel?x=${x}&y=${y}&color=${currentColor}`, { method: 'POST' }).then((response) => {});
 
     ctx.fillStyle = currentColor; // use the current color
     ctx.fillRect(x, y, 1, 1);
@@ -72,11 +72,11 @@ const PixelArtCanvas = () => {
 
   return (
     <div>
-      <canvas ref={canvasRef} id="pixel-canvas"></canvas>
+      <canvas ref={canvasRef} id='pixel-canvas'></canvas>
       <div>
-        <div className="color-selector" id="black"></div>
-        <div className="color-selector" id="red"></div>
-        <div className="color-selector" id="blue"></div>
+        <div className='color-selector' id='black'></div>
+        <div className='color-selector' id='red'></div>
+        <div className='color-selector' id='blue'></div>
       </div>
     </div>
   );

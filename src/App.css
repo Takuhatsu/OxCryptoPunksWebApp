@@ -4,8 +4,14 @@ body {
   font-weight: 400;
   /* padding-left: 2rem;
   padding-right: 2rem; */
-  line-height: 1.5;
+  line-height: 2;
   -ms-overflow-style: none; /* IE and Edge */
+  height: 100%;
+}
+
+@font-face {
+  font-family: Akkurat Mono, monospace;
+  src: url("./fonts/Akkurat-Mono.OTF") format("opentype");
 }
 
 @-moz-document url-prefix() { /* Disable scrollbar Firefox */
@@ -50,6 +56,10 @@ body::-webkit-scrollbar {
   color: #212121;
 }
 
+.text-web-bold {
+  font-weight: 900;
+}
+
 .text-web {
   font-weight: 400;
   color: #212121;
@@ -67,14 +77,14 @@ body::-webkit-scrollbar {
 .link-in-text {
   text-decoration: none;
   color:#0e0e0e;
-  background-color: #bfc500;
+  /* background-color: #bfc500; */
   border-radius: 15px;
   padding: 3px;
   transition: color 0.5s;
 }
 
 .link-in-text:hover {
-  color: #fff;
+  color: #bfc500;
 }
 
 /* Navbar section */
@@ -176,6 +186,18 @@ p {
   text-shadow: 0 0 20px , 0 0 40px, 0 0 80px , 0 0 100px;
 }
 
+.manifesto-video {
+  position: relative; /* Set the parent div to a positioned element */
+  overflow: visible;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 640px;
+  background-color: #a5abb1;
+  text-shadow: 0 0 20px , 0 0 40px, 0 0 80px , 0 0 100px;
+}
+
 .dropdown-menu {
   font-style: italic;
   font-weight: 100;
@@ -198,6 +220,7 @@ p {
   margin-right: auto;
   /* To avoid content flickering while page is loading */
   min-height: 103vh;
+  /* min-height: 70vh; */
 }
 
 #OxLogo {
@@ -293,7 +316,8 @@ p {
 
 /* Add Punk or Add Attributes succsess message */
 
-.success-message {
+
+.displayMessage {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -319,6 +343,7 @@ p {
   width: 240px;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top:1rem;
 }
 
 .separate-line {
@@ -396,13 +421,25 @@ p {
   margin-bottom: 0px;
 }
 
-#smart-contract-address {
+#metamaskAddress {
   text-align: center;
 }
 
-#smart-contract-address-mobile{
+#linkUnderlined {
+  text-decoration: underline;
+}
+
+#data {
+  font-family: Akkurat Mono, monospace; 
+}
+
+#metamaskAddressMobile{
   text-align: center;
   display: none;
+}
+
+#textCenter {
+  text-align: center;
 }
 
 .footer {
@@ -477,7 +514,7 @@ p {
   }
 
   #OxLogo {
-    width: 100%;
+    width: 15rem;
     height: auto;
   }
   .content-wrapper {
@@ -487,10 +524,10 @@ p {
   .titles {
     font-size: 27px;
   }
-  #smart-contract-address {
+  #metamaskAddress {
     display: none;
   }
-  #smart-contract-address-mobile {
+  #metamaskAddressMobile {
     display: block;
   }
 }
@@ -520,39 +557,6 @@ p {
     min-height: 22px !important;
 }
 } */
-
-/* Overwriting MUI styles */
-.css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
-  font-family: 'Montserrat', sans-serif !important;
-  font-weight: 400 !important;
-  font-style: italic;
-}
-
-.css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-  font-family: 'Montserrat', sans-serif !important;
-  font-weight: 400 !important;
-  font-style: italic;
-  color: #a5abb1 !important;
-}
-
-.css-2y464i-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled,
-.Mui-error):before {
-  border-bottom:1px solid #bfc500 !important;
-}
-
-/* Input label */
-
-.css-o943dk-MuiFormLabel-root-MuiInputLabel-root {
-  font-family: 'Montserrat', sans-serif !important;
-  font-style: italic !important;
-}
-
-.css-1s64528-MuiFormControl-root-MuiTextField-root.css-1s64528-MuiFormControl-root-MuiTextField-root label {
-  color:#a5abb1 !important;
-}
-
-/* End of input label */
-
 
 
 /* CRT effects starts here */
@@ -732,11 +736,6 @@ p {
 /* CRT effects ends here */
 
 
-
-
-
-
-
 /* Additional styling for the punk image */
 .punkImageBg {
   min-height: 384px;
@@ -757,15 +756,131 @@ p {
   bottom: 0; /* Align to the bottom */
 }
 
+.donts-animation {
+  text-align: left;
+}
+
+
 /* Emoji section */
 
-.emoji-image {
+.emojiImage {
   width: 32px;
   height: 32px;
   vertical-align: middle; /* To align the image with the text */
 }
 
+.emojiImageCoin {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle; /* To align the image with the text */
+}
+
+
 /* The end of the emoji section */
+
+/* Wallet connect custom button */
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.launchMetaMask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25ch;
+  height: 5ch;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Border with 20% opacity */
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: opacity 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.launchMetaMask:hover {
+  opacity: 0.5;
+}
+
+.j {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400 !important;
+}
+
+.metamaskImage {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle; /* To align the image with the text */
+  margin-right: 1rem;
+}
+
+.bytecodeDemo {
+  font-family: Akkurat Mono, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: auto;
+  height: auto;
+  background-color: rgba(165, 171, 177, 0.3);
+  border-radius: 7px;
+}
+
+.transactionTable {
+  text-align: left;
+  overflow-x:auto;
+  min-height:0.01%
+}
+
+.table {
+  width:100%;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:1rem;
+}
+
+.punk-history-row-bid {
+  background: #b8a7ce;
+}
+
+.punk-history-row-sold {
+  background: #adc9d6;
+}
+
+.punk-history-row-offer {
+  background: #d6adad;
+}
+
+.punk-history-row-transfer {
+  background: #add6b8;
+}
+
+.punk-history-row-wrap {
+  background: #9bbfa5;
+}
+
+.punk-history-row-claim {
+  background: #add6b8;
+}
+
+.linkNoHighlight {
+  text-decoration: none;
+  text-align: center;
+  color:#212121;
+  transition: color 0.5s ;
+}
+
+.linkNoHighlight:hover {
+  color:#bfc500;
+}
 
 
 

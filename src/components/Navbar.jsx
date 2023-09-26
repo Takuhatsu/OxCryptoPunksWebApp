@@ -10,7 +10,7 @@ const CustomSeparator = () => {
   return ''; // Return null to remove the separator
 };
 
-const Navbar = ({ className, onMintLinkClick }) => {
+const Navbar = ({ className }) => {
   const [activeLink, setActiveLink] = useState('/');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
